@@ -8,10 +8,14 @@ import { defineStore } from "pinia";
 import { computed, ref } from "vue";
 import { AgronomicApi } from "../infrastructure/agronomic-api.js";
 import { PlotAssembler } from "../infrastructure/plot.assembler.js";
+import { IotDeviceAssembler } from "../infrastructure/iot-device.assembler.js";
+
 
 import { Plot } from "../domain/model/plot.entity.js";
 import {DateTimeFormatter} from "../../shared/infrastructure/date-time.formatter.js";
 import {AgronomicAnalysisAssembler} from "../infrastructure/agronomic-analysis.assembler.js";
+import { IotDevice } from "../domain/model/iot-device.entity.js";
+
 
 const agronomicApi = new AgronomicApi();
 
@@ -144,6 +148,17 @@ export const useAgronomicStore = defineStore('agronomic', () => {
             ]
         };
     });
+     * List of IoT devices.
+     * @type {import('vue').Ref<IotDevice[]>}
+     */
+    const iotDevices = ref([]);
+
+    /**
+     * Whether IoT devices have been loaded.
+     * @type {import('vue').Ref<boolean>}
+     */
+    const iotDevicesLoaded = ref(false);
+
 
     /**
      * Loads plots from infrastructure and updates the application state.
@@ -210,6 +225,65 @@ export const useAgronomicStore = defineStore('agronomic', () => {
             analysisData.value = null;
         }).finally(() => {
             analysisLoading.value = false;
+     * Fetches all IoT devices.
+     */
+    function fetchIotDevices() {
+        agronomicApi.getIotDevices().then(response => {
+            iotDevices.value = IotDeviceAssembler.toEntitiesFromResponse(response);
+            iotDevicesLoaded.value = true;
+        }).catch(error => {
+            errors.value.push(error);
+        });
+    }
+
+    /**
+     * Gets an IoT device by ID from the local state.
+     * @param {number|string} id 
+     * @returns {IotDevice|null}
+     */
+    function getIotDeviceById(id) {
+        return iotDevices.value.find(d => String(d.id) === String(id)) || null;
+    }
+
+    /**
+     * Adds a new IoT device.
+     * @param {IotDevice} device 
+     */
+    function addIotDevice(device) {
+        const resource = IotDeviceAssembler.toResourceFromEntity(device);
+        agronomicApi.createIotDevice(resource).then(response => {
+            const entity = IotDeviceAssembler.toEntityFromResource(response.data);
+            iotDevices.value.push(entity);
+        }).catch(error => {
+            errors.value.push(error);
+        });
+    }
+
+    /**
+     * Updates an existing IoT device.
+     * @param {IotDevice} device 
+     */
+    function updateIotDevice(device) {
+        const resource = IotDeviceAssembler.toResourceFromEntity(device);
+        agronomicApi.updateIotDevice(device.id, resource).then(response => {
+            const index = iotDevices.value.findIndex(d => d.id === device.id);
+            if (index !== -1) {
+                iotDevices.value[index] = IotDeviceAssembler.toEntityFromResource(response.data);
+            }
+        }).catch(error => {
+            errors.value.push(error);
+        });
+    }
+
+    /**
+     * Deletes an IoT device.
+     * @param {IotDevice} device 
+     */
+    function deleteIotDevice(device) {
+        agronomicApi.deleteIotDevice(device.id).then(() => {
+            iotDevices.value = iotDevices.value.filter(d => d.id !== device.id);
+        }).catch(error => {
+            errors.value.push(error);
         });
     }
 
@@ -230,6 +304,13 @@ export const useAgronomicStore = defineStore('agronomic', () => {
         setAnalysisTimeRange,
         fetchAnalysisStatistics,
         analysisChartData
+        iotDevices,
+        iotDevicesLoaded,
+        fetchIotDevices,
+        getIotDeviceById,
+        addIotDevice,
+        updateIotDevice,
+        deleteIotDevice
     };
 });
 
