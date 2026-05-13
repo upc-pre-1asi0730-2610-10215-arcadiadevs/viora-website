@@ -16,7 +16,6 @@ import { initializeRoleBenefitsSection } from './components/role-benefits-sectio
 import { initializePlansTrialAffiliatesSection } from './components/plans-trial-affiliates-section.js';
 import { initializePricingPlansPanel } from './components/pricing-plans-panel.js';
 import { initializeReferralsInfo } from './components/referrals-info.js';
-import { initializeAboutSection } from './components/about-section.js';
 import { initializeAboutMissionPanel } from './components/about-mission-panel.js';
 import { initializeTeamMembersPanel } from './components/team-members-panel.js';
 import { initializeLearningFromBestPanel } from './components/learning-from-best-panel.js';
@@ -49,8 +48,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         initializePlansTrialAffiliatesSection();
         initializePricingPlansPanel();
         initializeReferralsInfo();
-
-        initializeAboutSection();
+        
         initializeAboutMissionPanel();
         initializeTeamMembersPanel();
         initializeLearningFromBestPanel();
