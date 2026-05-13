@@ -3,6 +3,8 @@ import { initializeLiquidGlassEffect } from './effects/liquid-glass.effect.js';
 import { initializeMagneticEffect } from './effects/magnetic.effect.js';
 import { initializeHoverSoundEffect } from './effects/hover-sound.effect.js';
 import { initializeSoundToggle } from './sound.js';
+import { initializeProblemCardsSection, initializeProblemSolutionSection } from './components/problem-solution-section.js';
+import { initializeAboutIntroSection } from './components/about-intro-section.js';
 
 document.addEventListener('DOMContentLoaded', async () => {
     try {
@@ -12,6 +14,11 @@ document.addEventListener('DOMContentLoaded', async () => {
         initializeLiquidGlassEffect();
         initializeMagneticEffect();
         initializeHoverSoundEffect();
+
+        initializeAboutIntroSection();
+
+        initializeProblemCardsSection();
+
     } catch (error) {
         console.error(error);
     }
