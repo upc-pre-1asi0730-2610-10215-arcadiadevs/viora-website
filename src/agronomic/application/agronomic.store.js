@@ -77,6 +77,7 @@ export const useAgronomicStore = defineStore('agronomic', () => {
      * @type {import('vue').Ref<WeatherSummary|null>}
      */
     const weatherSummary = ref(null);
+    /**
      * Number of loaded plots.
      * @type {import('vue').ComputedRef<number>}
      */
@@ -192,6 +193,7 @@ export const useAgronomicStore = defineStore('agronomic', () => {
         riskLevel: yieldForecast.value.riskLevel,
         description: yieldForecast.value.description
     }));
+    /**
      * Computed property that prepares analysis data for the PrimeVue Chart component.
      * Transforms backend analysis entities into Chart.js compatible data objects.
      * @type {import('vue').ComputedRef<Object>}
@@ -238,6 +240,7 @@ export const useAgronomicStore = defineStore('agronomic', () => {
             ]
         };
     });
+    /**
      * List of IoT devices.
      * @type {import('vue').Ref<IotDevice[]>}
      */
@@ -346,6 +349,10 @@ export const useAgronomicStore = defineStore('agronomic', () => {
             analysisData.value = null;
         }).finally(() => {
             analysisLoading.value = false;
+        });
+    }
+
+    /**
      * Fetches all IoT devices.
      */
     function fetchIotDevices() {
@@ -435,7 +442,7 @@ export const useAgronomicStore = defineStore('agronomic', () => {
         setAnalysisPlot,
         setAnalysisTimeRange,
         fetchAnalysisStatistics,
-        analysisChartData
+        analysisChartData,
         iotDevices,
         iotDevicesLoaded,
         fetchIotDevices,
