@@ -9,12 +9,12 @@ import { computed, ref } from "vue";
 import { AgronomicApi } from "../infrastructure/agronomic-api.js";
 import { PlotAssembler } from "../infrastructure/plot.assembler.js";
 import { IotDeviceAssembler } from "../infrastructure/iot-device.assembler.js";
-
+import { WeatherSummaryAssembler } from "../infrastructure/weather-summary.assembler.js";
 
 import { Plot } from "../domain/model/plot.entity.js";
 import {DateTimeFormatter} from "../../shared/infrastructure/date-time.formatter.js";
 import { IotDevice } from "../domain/model/iot-device.entity.js";
-
+import { WeatherSummary } from "../domain/model/weather-summary.entity.js";
 
 const agronomicApi = new AgronomicApi();
 
@@ -35,6 +35,12 @@ export const useAgronomicStore = defineStore('agronomic', () => {
      * @type {import('vue').Ref<number|string|null>}
      */
     const selectedPlotId = ref(null);
+
+    /**
+     * Current weather summary entity.
+     * @type {import('vue').Ref<WeatherSummary|null>}
+     */
+    const weatherSummary = ref(null);
 
     /**
      * List of errors encountered during API operations.
@@ -94,6 +100,16 @@ export const useAgronomicStore = defineStore('agronomic', () => {
             errors.value.push(error);
         });
     }
+
+    function fetchWeather(city = 'Tacna') {
+        agronomicApi.getWeather({ city }).then(response => {
+            const entities = WeatherSummaryAssembler.toEntitiesFromResponse(response);
+            weatherSummary.value = entities.length > 0 ? entities[0] : null;
+        }).catch(error => {
+            errors.value.push(error);
+        });
+    }
+
 
     /**
      * Updates the selected plot identifier.
@@ -181,6 +197,7 @@ export const useAgronomicStore = defineStore('agronomic', () => {
         getIotDeviceById,
         addIotDevice,
         updateIotDevice,
+        weatherSummary,
         deleteIotDevice
     };
 });

@@ -2,7 +2,7 @@
 import { BaseEndpoint } from "../../shared/infrastructure/base-endpoint.js";
 
 const plotsEndpointPath = import.meta.env.VITE_PLOTS_ENDPOINT_PATH;
-
+const weatherEndpointPath = import.meta.env.VITE_WEATHER_SUMMARIES_ENDPOINT_PATH;
 /**
  * Infrastructure service gateway for the Agronomic bounded-context endpoints.
  * Manages multiple specific endpoints for agronomic entities.
@@ -11,12 +11,13 @@ const plotsEndpointPath = import.meta.env.VITE_PLOTS_ENDPOINT_PATH;
  */
 export class AgronomicApi extends BaseApi {
     #plotsEndpoint;
-
+    #weatherEndpoint;
     /** * Initializes all internal endpoints using environment variable paths.
      */
     constructor() {
         super();
         this.#plotsEndpoint = new BaseEndpoint(this, plotsEndpointPath);
+        this.#weatherEndpoint = new BaseEndpoint(this, weatherEndpointPath);
     }
 
     /**
@@ -34,4 +35,13 @@ export class AgronomicApi extends BaseApi {
     getPlotById(id) {
         return this.#plotsEndpoint.getById(id);
     }
+
+    /**
+     * Fetches weather information for the weather widget.
+     * @param {Object} [params={}] - Filter parameters (e.g., { city: 'Tacna' }).
+     */
+    getWeather(params = {}) {
+        return this.#weatherEndpoint.getAll(params);
+    }
+
 }
