@@ -1,34 +1,42 @@
 ﻿import { createRouter, createWebHistory } from "vue-router";
+import agronomicRoutes from "./agronomic/presentation/agronomic-routes.js";
 
+const producerDashboard = () => import('./shared/presentation/views/dashboard-producer.vue');
+
+/**
+ * Main application router.
+ */
 const routes = [
     {
+        path: '/dashboard',
+        name: 'dashboard',
+        component: producerDashboard,
+        meta: {
+            title: 'option.dashboard',
+            description: 'dashboard.header-description'
+        }
+    },
+    { 
+        path: '/agronomic', 
+        name: 'agronomic', 
+        children: agronomicRoutes 
+    },
+    { 
+        path: '/', 
+        redirect: '/dashboard' 
     }
 ];
 
 const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
-    routes: routes,
-
+    routes: routes
 });
 
 /**
- * Global navigation guard that updates the document title and delegates auth when enabled.
- *
- * @param {import('vue-router').RouteLocationNormalized} to - Target route.
- * @param {import('vue-router').RouteLocationNormalized} from - Previous route.
- * @param {import('vue-router').NavigationGuardNext} next - Guard continuation callback.
- * @returns {void}
+ * Global navigation guard for updating document title.
  */
 router.beforeEach((to, from, next) => {
-    console.log(`Navigating from ${from.name} to ${to.name}`);
-    // Set the page title
-    let baseTitle = 'Dashboard';
-    // We can't use t() here easily without importing i18n,
-    // so we'll just use the raw key or a simplified title for the browser tab.
-    document.title = `${baseTitle} - ${to.name}`;
-    // When IAM is implemented, use:
-    // return authenticationGuard(to, from, next);
-    // if not, use:
+    document.title = `Dashboard - ${to.name}`;
     return next();
 });
 
