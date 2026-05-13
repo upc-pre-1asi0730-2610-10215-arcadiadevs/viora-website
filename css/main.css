@@ -3,6 +3,7 @@
 @import url('./typography.css');
 @import url('./layout.css');
 @import url('./liquid-glass.css');
-@import url('./animations.css');
+@import url('./animation.css');
+@import url('./sections.css');
 @import url('./cursor.css');
 @import url('./responsive.css');
