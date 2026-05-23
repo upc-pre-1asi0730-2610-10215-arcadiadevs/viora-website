@@ -53,20 +53,18 @@
                         <span data-i18n="navbar.aboutUs">About Us</span>
                     </a>
 
-                    <a class="landing-header__nav-link" href="#contact" data-hover-sound>
-                        <img class="landing-header__nav-icon" src="./assets/icons/call-outline.svg" alt="" aria-hidden="true" />
-                        <span data-i18n="navbar.contact">Contact</span>
-                    </a>
+
                 </nav>
 
                 <div class="landing-header__actions">
-                    <button class="landing-header__language-button liquid-glass liquid-glass--deep" type="button" aria-label="Change language"
-                        data-i18n-aria="aria.languageToggle" data-hover-sound data-liquid-glass>
-                        <span class="landing-header__lang-option" data-lang-switch="en"><b>EN</b></span> | <span class="landing-header__lang-option" data-lang-switch="es">ES</span>
-                    </button>
+                    <div class="landing-header__language-switcher liquid-glass liquid-glass--deep" data-language-switcher data-liquid-glass>
+                        <button class="landing-header__language-btn" type="button" data-lang-switch="en" data-hover-sound>EN</button>
+                        <button class="landing-header__language-btn" type="button" data-lang-switch="es" data-hover-sound>ES</button>
+                        <div class="landing-header__language-slider"></div>
+                    </div>
 
                     <span class="magnetic-target" data-magnetic data-magnetic-strength="1" data-magnetic-max="14" data-hover-sound>
-                        <a class="landing-header__cta" href="#" data-i18n="navbar.getStarted">
+                        <a class="landing-header__cta" href="https://viora-webapp.web.app" data-i18n="navbar.getStarted">
                             Get Started
                         </a>
                     </span>
@@ -74,10 +72,11 @@
 
                 <!-- Mobile: language toggle + hamburger -->
                 <div class="landing-header__mobile-actions">
-                    <button class="landing-header__language-button landing-header__language-button--mobile liquid-glass liquid-glass--deep" type="button" aria-label="Change language"
-                        data-i18n-aria="aria.languageToggle" data-hover-sound data-liquid-glass>
-                        <span class="landing-header__lang-option" data-lang-switch="en"><b>EN</b></span> | <span class="landing-header__lang-option" data-lang-switch="es">ES</span>
-                    </button>
+                    <div class="landing-header__language-switcher liquid-glass liquid-glass--deep" data-language-switcher data-liquid-glass>
+                        <button class="landing-header__language-btn" type="button" data-lang-switch="en" data-hover-sound>EN</button>
+                        <button class="landing-header__language-btn" type="button" data-lang-switch="es" data-hover-sound>ES</button>
+                        <div class="landing-header__language-slider"></div>
+                    </div>
 
                     <span class="magnetic-target landing-header__hamburger-magnetic" data-magnetic data-magnetic-strength="1" data-magnetic-max="20">
                         <button class="landing-header__hamburger liquid-glass liquid-glass--deep" type="button" aria-label="Open menu" aria-expanded="false" data-drawer-toggle data-liquid-glass data-hover-sound>
@@ -113,13 +112,13 @@
                 <!-- Small links -->
                 <nav class="landing-header__drawer-small-links">
                     <a href="#about" data-drawer-link data-hover-sound data-i18n="navbar.aboutUs">About Us</a>
-                    <a href="#contact" data-drawer-link data-hover-sound data-i18n="navbar.contact">Contact</a>
+
                 </nav>
 
                 <!-- CTA -->
                 <div class="landing-header__drawer-cta">
                     <span class="magnetic-target" data-magnetic data-magnetic-strength="1" data-magnetic-max="14">
-                        <a class="landing-button landing-button--green liquid-glass liquid-glass--green" href="#" data-drawer-link data-liquid-glass data-hover-sound data-i18n="navbar.getStarted">
+                        <a class="landing-button landing-button--green liquid-glass liquid-glass--green" href="https://viora-webapp.web.app" data-drawer-link data-liquid-glass data-hover-sound data-i18n="navbar.getStarted">
                             Get Started
                         </a>
                     </span>
@@ -133,9 +132,9 @@
 
             <div class="hero-section__content">
                 <h1 class="hero-section__title" id="hero-title" data-i18n="hero.title">
-                    Maximize Your Olive<br />
-                    Yields with Smart<br />
-                    Management.
+                    Maximum Yield<br />
+                    for Growers, Total Precision<br />
+                    for Specialists.
                 </h1>
 
                 <p class="hero-section__subtitle" data-i18n="hero.subtitle">
@@ -145,7 +144,7 @@
                 </p>
 
                 <div class="hero-section__actions" aria-label="Hero actions" data-i18n-aria="aria.heroActions">
-                    <landing-button variant="secondary" href="#pricing" i18n-key="hero.cta" liquid-glass-color="green">
+                    <landing-button variant="secondary" href="https://viora-webapp.web.app" i18n-key="hero.cta" liquid-glass-color="green" magnetic-max="14">
                         Get Started Now!
                     </landing-button>
                 </div>
@@ -175,6 +174,24 @@
                 </div>
             </div>
         </section>
+
+        <span class="magnetic-target floating-sound-toggle-wrap" data-magnetic data-magnetic-strength="1" data-magnetic-max="12" data-floating-sound-toggle-wrap>
+            <button class="floating-sound-toggle liquid-glass liquid-glass--green" type="button" data-sound-toggle data-floating-sound-toggle data-liquid-glass data-hover-sound
+                data-i18n-aria-label="aria.soundToggle" aria-label="Toggle sound" aria-pressed="false">
+                <svg class="floating-sound-toggle__icon" width="24" height="10" viewBox="0 0 24 10" overflow="hidden"
+                    fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                    <g class="hero-section__animated-wave" data-sound-wave-animated hidden>
+                        <path d="M0 5 Q 3 0 6 5 T 12 5 T 18 5 T 24 5 T 30 5 T 36 5" />
+                    </g>
+
+                    <g data-sound-wave-flat>
+                        <path d="M0 5 L 24 5" />
+                    </g>
+                </svg>
+
+                <span data-i18n="hero.sound">SOUND</span>
+            </button>
+        </span>
 
         <section class="about-intro-section" id="about-intro" data-wave-scroll aria-labelledby="about-intro-title">
             <div class="about-intro-section__wave" aria-hidden="true"></div>
@@ -217,6 +234,12 @@
 
         <section class="problem-cards-section" id="problem-cards" aria-labelledby="problem-cards-title">
             <div class="problem-cards-section__container">
+                <div class="problem-cards-section__topline" id="features">
+                    <span class="problem-cards-section__section-label" data-i18n="problemCards.sectionLabel">
+                        Features
+                    </span>
+                </div>
+
                 <div class="problem-cards-section__layout">
                     <div class="problem-cards-section__content">
                         <p class="problem-cards-section__tag" data-i18n="problemCards.tag">
@@ -232,11 +255,11 @@
                         </p>
 
                         <div class="problem-cards-section__actions">
-                            <landing-button variant="secondary" href="#solution" i18n-key="problemCards.cta" liquid-glass-color="green" magnetic-max="16">
+                            <landing-button variant="secondary" href="#solution" i18n-key="problemCards.cta" liquid-glass-color="green" magnetic-max="14">
                                 See How Viora Solves This
                             </landing-button>
 
-                            <landing-button variant="secondary" href="#solution" liquid-glass-color="green" is-icon icon-src="./assets/icons/checkmark.svg" i18n-key="problemCards.ctaAria" magnetic-max="16"></landing-button>
+                            <landing-button variant="secondary" href="#solution" liquid-glass-color="green" is-icon icon-src="./assets/icons/checkmark.svg" i18n-key="problemCards.ctaAria" magnetic-max="14"></landing-button>
                         </div>
                     </div>
 
@@ -344,14 +367,6 @@
                 </div>
             </section>
 
-            <div class="solution-panel__topline" id="features">
-                <div class="solution-panel__container">
-                    <span class="solution-panel__section-label" data-i18n="problemCards.sectionLabel">
-                        Features
-                    </span>
-                </div>
-            </div>
-
             <section class="solution-panel" id="solution-panel" aria-labelledby="solution-panel-title">
                 <div class="solution-panel__header">
                     <p class="solution-panel__eyebrow" data-i18n="solutionPanel.eyebrow">
@@ -375,8 +390,8 @@
                             </h3>
 
                             <div class="solution-card__icon" aria-hidden="true">
-                                <img src="./assets/icons/icons-cards/bug.png" alt="" class="solution-card__icon-img" />
-                                <img src="./assets/icons/icons-cards/bug-white.png" alt="" class="solution-card__icon-img--white" />
+                                <img src="./assets/icons/icons-cards/new/bug.png" alt="" class="solution-card__icon-img" />
+                                <img src="./assets/icons/icons-cards/new/bug_white.png" alt="" class="solution-card__icon-img--white" />
                             </div>
 
                             <p class="solution-card__description" data-i18n="solutionPanel.cards.alerts.description">
@@ -390,8 +405,8 @@
                             </h3>
 
                             <div class="solution-card__icon" aria-hidden="true">
-                                <img src="./assets/icons/icons-cards/bag.png" alt="" class="solution-card__icon-img" />
-                                <img src="./assets/icons/icons-cards/bag-white.png" alt="" class="solution-card__icon-img--white" />
+                                <img src="./assets/icons/icons-cards/new/bag.png" alt="" class="solution-card__icon-img" />
+                                <img src="./assets/icons/icons-cards/new/bag_white.png" alt="" class="solution-card__icon-img--white" />
                             </div>
 
                             <p class="solution-card__description" data-i18n="solutionPanel.cards.marketplace.description">
@@ -405,8 +420,8 @@
                             </h3>
 
                             <div class="solution-card__icon" aria-hidden="true">
-                                <img src="./assets/icons/icons-cards/satelite.png" alt="" class="solution-card__icon-img" />
-                                <img src="./assets/icons/icons-cards/satelite-white.png" alt="" class="solution-card__icon-img--white" />
+                                <img src="./assets/icons/icons-cards/new/satelite.png" alt="" class="solution-card__icon-img" />
+                                <img src="./assets/icons/icons-cards/new/satelite_white.png" alt="" class="solution-card__icon-img--white" />
                             </div>
 
                             <p class="solution-card__description" data-i18n="solutionPanel.cards.ndvi.description">
@@ -420,8 +435,8 @@
                             </h3>
 
                             <div class="solution-card__icon" aria-hidden="true">
-                                <img src="./assets/icons/icons-cards/cold-olive.png" alt="" class="solution-card__icon-img" />
-                                <img src="./assets/icons/icons-cards/cold-olive-white.png" alt="" class="solution-card__icon-img--white" />
+                                <img src="./assets/icons/icons-cards/new/cold-olive.png" alt="" class="solution-card__icon-img" />
+                                <img src="./assets/icons/icons-cards/new/cold-olive_white.png" alt="" class="solution-card__icon-img--white" />
                             </div>
 
                             <p class="solution-card__description" data-i18n="solutionPanel.cards.chill.description">
@@ -435,8 +450,8 @@
                             </h3>
 
                             <div class="solution-card__icon" aria-hidden="true">
-                                <img src="./assets/icons/icons-cards/olive.png" alt="" class="solution-card__icon-img" />
-                                <img src="./assets/icons/icons-cards/olive-white.png" alt="" class="solution-card__icon-img--white" />
+                                <img src="./assets/icons/icons-cards/new/olive.png" alt="" class="solution-card__icon-img" />
+                                <img src="./assets/icons/icons-cards/new/olive_white.png" alt="" class="solution-card__icon-img--white" />
                             </div>
 
                             <p class="solution-card__description" data-i18n="solutionPanel.cards.nutrition.description">
@@ -450,8 +465,8 @@
                             </h3>
 
                             <div class="solution-card__icon" aria-hidden="true">
-                                <img src="./assets/icons/icons-cards/dron.png" alt="" class="solution-card__icon-img" />
-                                <img src="./assets/icons/icons-cards/dron-white.png" alt="" class="solution-card__icon-img--white" />
+                                <img src="./assets/icons/icons-cards/new/stats.png" alt="" class="solution-card__icon-img" />
+                                <img src="./assets/icons/icons-cards/new/stats_white.png" alt="" class="solution-card__icon-img--white" />
                             </div>
 
                             <p class="solution-card__description" data-i18n="solutionPanel.cards.climate.description">
@@ -547,7 +562,7 @@
                             When risk rises, Viora connects you with nearby specialists who can review your field data, assess the situation, and help you respond faster with targeted technical action.
                         </p>
 
-                        <landing-button variant="green" href="#growers" i18n-key="expectedOutcomes.recommendation.cta" magnetic-max="16">
+                        <landing-button variant="green" href="https://viora-webapp.web.app" i18n-key="expectedOutcomes.recommendation.cta" magnetic-max="16">
                             Explore the Marketplace
                         </landing-button>
                     </div>
@@ -559,7 +574,97 @@
             </section>
         </section>
 
-        <section class="role-benefits-section role-benefits-section--growers" id="growers" aria-labelledby="role-benefits-growers-title">
+        <section class="segments-overview" aria-labelledby="segments-overview-title">
+            <div class="segments-overview__topline">
+                <span class="segments-overview__section-label" data-i18n="roleBenefits.sectionLabel">
+                    Segments
+                </span>
+            </div>
+
+            <div class="segments-overview__intro">
+                <h2 class="segments-overview__title" id="segments-overview-title" data-i18n="roleBenefits.title">
+                    One platform. Two powerful experiences.
+                </h2>
+                <p class="segments-overview__description" data-i18n="roleBenefits.description">
+                    Whether you manage olive production or provide crop protection services, Viora gives you the tools and connections to act earlier and decide better.
+                </p>
+            </div>
+
+            <nav class="segments-overview__nav" aria-label="Segment cards" data-i18n-aria-label="roleBenefits.navAria">
+                <a class="segments-overview__arrow segments-overview__arrow--prev" href="#growers" aria-label="Go to growers segment" data-i18n-aria-label="roleBenefits.growersLinkAria" data-magnetic data-magnetic-strength="1" data-magnetic-max="14" data-hover-sound>
+                    <img class="segments-overview__arrow-icon segments-overview__arrow-icon--prev" src="./assets/icons/arrow-white.svg" alt="" aria-hidden="true" />
+                </a>
+                <a class="segments-overview__option segments-overview__option--growers" href="#growers" data-i18n="roleBenefits.growersTitle" data-hover-sound>Growers</a>
+                <a class="segments-overview__option segments-overview__option--specialists" href="#specialists" data-i18n="roleBenefits.specialistsTitle" data-hover-sound>Specialists</a>
+                <a class="segments-overview__arrow segments-overview__arrow--next" href="#specialists" aria-label="Go to specialists segment" data-i18n-aria-label="roleBenefits.specialistsLinkAria" data-magnetic data-magnetic-strength="1" data-magnetic-max="14" data-hover-sound>
+                    <img class="segments-overview__arrow-icon" src="./assets/icons/arrow-white.svg" alt="" aria-hidden="true" />
+                </a>
+            </nav>
+        </section>
+
+        <section class="segment-story-group" aria-label="Growers and specialists journeys">
+            <section class="segment-story segment-story--growers" id="growers" data-segment-story="growers" aria-labelledby="segment-story-growers-title">
+                <div class="segment-story__sticky">
+                    <article class="segment-story__card">
+                        <div class="segment-story__content">
+                            <p class="segment-story__eyebrow" data-segment-eyebrow>Growers</p>
+                            <h2 class="segment-story__title" id="segment-story-growers-title" data-segment-title>Start with your olive plot</h2>
+                            <p class="segment-story__description" data-segment-description></p>
+                            <ul class="segment-story__bullets" data-segment-bullets></ul>
+                            <div class="segment-story__actions">
+                                <span class="magnetic-target" data-magnetic data-magnetic-strength="1" data-magnetic-max="16">
+                                    <a class="segment-story__mobile-button landing-button landing-button--green liquid-glass liquid-glass--green" href="https://viora-webapp.web.app" data-liquid-glass data-hover-sound data-segment-cta>Create grower account</a>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="segment-story__visual-wrap" aria-hidden="true">
+                            <div class="segment-story__visual" data-segment-visual></div>
+                        </div>
+
+                        <div class="segment-story__progress" aria-hidden="true">
+                            <span data-segment-current>01</span>
+                            <span>/ 04</span>
+                        </div>
+                        <div class="segment-story__dots" data-segment-dots aria-hidden="true"></div>
+                    </article>
+                </div>
+
+                <div class="segment-story__mobile-list" data-segment-mobile-list></div>
+            </section>
+
+            <section class="segment-story segment-story--specialists" id="specialists" data-segment-story="specialists" aria-labelledby="segment-story-specialists-title">
+                <div class="segment-story__sticky">
+                    <article class="segment-story__card">
+                        <div class="segment-story__content">
+                            <p class="segment-story__eyebrow" data-segment-eyebrow>Specialists</p>
+                            <h2 class="segment-story__title" id="segment-story-specialists-title" data-segment-title>Be visible when growers need help</h2>
+                            <p class="segment-story__description" data-segment-description></p>
+                            <ul class="segment-story__bullets" data-segment-bullets></ul>
+                            <div class="segment-story__actions">
+                                <span class="magnetic-target" data-magnetic data-magnetic-strength="1" data-magnetic-max="16">
+                                    <a class="segment-story__mobile-button landing-button landing-button--orange liquid-glass liquid-glass--orange" href="https://viora-webapp.web.app" data-liquid-glass data-hover-sound data-segment-cta>Join specialist network</a>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="segment-story__visual-wrap" aria-hidden="true">
+                            <div class="segment-story__visual" data-segment-visual></div>
+                        </div>
+
+                        <div class="segment-story__progress" aria-hidden="true">
+                            <span data-segment-current>01</span>
+                            <span>/ 04</span>
+                        </div>
+                        <div class="segment-story__dots" data-segment-dots aria-hidden="true"></div>
+                    </article>
+                </div>
+
+                <div class="segment-story__mobile-list" data-segment-mobile-list></div>
+            </section>
+        </section>
+
+        <section class="role-benefits-section role-benefits-section--growers" id="growers-legacy" aria-labelledby="role-benefits-growers-title" hidden aria-hidden="true">
             <div class="role-benefits-section__container">
                 <div class="role-benefits-section__topline">
                     <span class="role-benefits-section__section-label" data-i18n="roleBenefits.growersTitle">
@@ -613,7 +718,7 @@
             </div>
         </section>
 
-        <section class="role-benefits-section role-benefits-section--specialists" id="specialists" aria-labelledby="role-benefits-specialists-title">
+        <section class="role-benefits-section role-benefits-section--specialists" id="specialists-legacy" aria-labelledby="role-benefits-specialists-title" hidden aria-hidden="true">
             <div class="role-benefits-section__container">
                 <div class="role-benefits-section__topline">
                     <span class="role-benefits-section__section-label" data-i18n="roleBenefits.specialistsTitle">
@@ -668,8 +773,9 @@
         </section>
 
         <section class="plans-trial-affiliates-section" aria-label="Pricing plans section">
-            <section class="pricing-parallax-intro pricing-parallax-intro--static" id="pricing-intro" aria-labelledby="pricing-parallax-title">
-                <div class="pricing-parallax-intro__container">
+            <section class="pricing-parallax-intro" id="pricing-intro" data-pricing-parallax-intro aria-labelledby="pricing-parallax-title">
+                <div class="pricing-parallax-intro__sticky">
+                    <div class="pricing-parallax-intro__container">
                     <div class="pricing-parallax-intro__copy">
                         <div class="pricing-parallax-intro__text-group pricing-parallax-intro__text-group--first">
                             <h2 class="pricing-parallax-intro__title" id="pricing-parallax-title" data-i18n="pricingIntro.firstTitle">
@@ -693,9 +799,10 @@
                     </div>
 
                     <div class="pricing-parallax-intro__image-stage" aria-hidden="true">
-                        <img class="pricing-parallax-intro__image pricing-parallax-intro__image--one" src="./assets/images/pricing/pricing-olive-field-01.png" alt="" />
-                        <img class="pricing-parallax-intro__image pricing-parallax-intro__image--two" src="./assets/images/pricing/pricing-olive-field-02.png" alt="" />
-                        <img class="pricing-parallax-intro__image pricing-parallax-intro__image--three" src="./assets/images/pricing/pricing-olive-field-03.png" alt="" />
+                        <img class="pricing-parallax-intro__image pricing-parallax-intro__image--one" src="./assets/images/pricing/pricing-olive-field-01.png" alt="" data-pricing-parallax-image />
+                        <img class="pricing-parallax-intro__image pricing-parallax-intro__image--two" src="./assets/images/pricing/pricing-olive-field-02.png" alt="" data-pricing-parallax-image />
+                        <img class="pricing-parallax-intro__image pricing-parallax-intro__image--three" src="./assets/images/pricing/pricing-olive-field-03.png" alt="" data-pricing-parallax-image />
+                    </div>
                     </div>
                 </div>
             </section>
@@ -739,7 +846,10 @@
                     <div class="pricing-plans-panel__stage">
                         <article class="pricing-plan pricing-plan--producer pricing-plan--active" data-pricing-plan="producer">
                             <div class="pricing-plan__visual">
-                                <img class="pricing-plan__ticket" src="./assets/images/pricing/grower-referral-ticket.png" alt="Viora referral ticket for olive producers" />
+                                <div class="pricing-plan__ticket" role="img" aria-label="Viora referral ticket for olive producers">
+                                    <img class="pricing-plan__ticket-part pricing-plan__ticket-part--left" src="./assets/images/pricing/new-ticket/viora-ticket-left-part-grower.png" alt="" aria-hidden="true" />
+                                    <img class="pricing-plan__ticket-part pricing-plan__ticket-part--right" src="./assets/images/pricing/new-ticket/viora-ticket-right-part-grower.png" alt="" aria-hidden="true" />
+                                </div>
                             </div>
 
                             <div class="pricing-plan__content">
@@ -770,7 +880,7 @@
 
                                 <div class="pricing-plan__actions">
                                     <span class="magnetic-target" data-magnetic data-magnetic-strength="1" data-magnetic-max="16">
-                                        <a class="landing-button landing-button--green liquid-glass liquid-glass--green" href="#trial" data-liquid-glass data-hover-sound data-wave-fill="#5A7A6A">
+                                        <a class="landing-button landing-button--green liquid-glass liquid-glass--green" href="https://viora-webapp.web.app" data-liquid-glass data-hover-sound data-wave-fill="#5A7A6A">
                                             <span data-i18n="pricingPlans.producer.cta">
                                                 Sign Up
                                             </span>
@@ -778,7 +888,7 @@
                                     </span>
 
                                     <span class="magnetic-target" data-magnetic data-magnetic-strength="1" data-magnetic-max="16">
-                                        <a class="landing-button landing-button--icon landing-button--green liquid-glass liquid-glass--green" href="#trial" data-liquid-glass data-hover-sound aria-label="Start risk-free trial">
+                                        <a class="landing-button landing-button--icon landing-button--green liquid-glass liquid-glass--green" href="https://viora-webapp.web.app" data-liquid-glass data-hover-sound aria-label="Start risk-free trial">
                                             <img class="landing-button__icon-img" src="./assets/icons/arrow-white.svg" alt="" aria-hidden="true" />
                                         </a>
                                     </span>
@@ -788,7 +898,10 @@
 
                         <article class="pricing-plan pricing-plan--specialist" data-pricing-plan="specialist">
                             <div class="pricing-plan__visual">
-                                <img class="pricing-plan__ticket" src="./assets/images/pricing/specialist-referral-ticket.png" alt="Viora referral ticket for phytosanitary specialists" />
+                                <div class="pricing-plan__ticket" role="img" aria-label="Viora referral ticket for phytosanitary specialists">
+                                    <img class="pricing-plan__ticket-part pricing-plan__ticket-part--left" src="./assets/images/pricing/new-ticket/viora-ticket-left-part-specialist.png" alt="" aria-hidden="true" />
+                                    <img class="pricing-plan__ticket-part pricing-plan__ticket-part--right" src="./assets/images/pricing/new-ticket/viora-ticket-right-part-specialist.png" alt="" aria-hidden="true" />
+                                </div>
                             </div>
 
                             <div class="pricing-plan__content">
@@ -819,7 +932,7 @@
 
                                 <div class="pricing-plan__actions">
                                     <span class="magnetic-target" data-magnetic data-magnetic-strength="1" data-magnetic-max="16">
-                                        <a class="landing-button landing-button--orange liquid-glass liquid-glass--orange" href="#trial" data-liquid-glass data-hover-sound data-wave-fill="#E8B08C">
+                                        <a class="landing-button landing-button--orange liquid-glass liquid-glass--orange" href="https://viora-webapp.web.app" data-liquid-glass data-hover-sound data-wave-fill="#E8B08C">
                                             <span data-i18n="pricingPlans.specialist.cta">
                                                 Sign Up
                                             </span>
@@ -827,7 +940,7 @@
                                     </span>
 
                                     <span class="magnetic-target" data-magnetic data-magnetic-strength="1" data-magnetic-max="16">
-                                        <a class="landing-button landing-button--icon landing-button--orange liquid-glass liquid-glass--orange" href="#trial" data-liquid-glass data-hover-sound aria-label="Start risk-free trial">
+                                        <a class="landing-button landing-button--icon landing-button--orange liquid-glass liquid-glass--orange" href="https://viora-webapp.web.app" data-liquid-glass data-hover-sound aria-label="Start risk-free trial">
                                             <img class="landing-button__icon-img" src="./assets/icons/arrow-white.svg" alt="" aria-hidden="true" />
                                         </a>
                                     </span>
@@ -860,7 +973,7 @@
 
                             <div class="referrals-info__actions">
                                 <span class="magnetic-target" data-magnetic data-magnetic-strength="1" data-magnetic-max="16">
-                                    <a class="landing-button landing-button--green liquid-glass liquid-glass--green" href="#" data-liquid-glass data-hover-sound data-wave-fill="#5A7A6A">
+                                    <a class="landing-button landing-button--green liquid-glass liquid-glass--green" href="https://viora-webapp.web.app" data-liquid-glass data-hover-sound data-wave-fill="#5A7A6A">
                                         <span data-i18n="referralsInfo.cta">
                                             Get My Referral Link
                                         </span>
@@ -868,7 +981,7 @@
                                 </span>
 
                                 <span class="magnetic-target" data-magnetic data-magnetic-strength="1" data-magnetic-max="16">
-                                    <a class="landing-button landing-button--icon landing-button--green liquid-glass liquid-glass--green" href="#" data-liquid-glass data-hover-sound aria-label="Get my referral link" data-i18n-aria-label="referralsInfo.ctaAria">
+                                    <a class="landing-button landing-button--icon landing-button--green liquid-glass liquid-glass--green" href="https://viora-webapp.web.app" data-liquid-glass data-hover-sound aria-label="Get my referral link" data-i18n-aria-label="referralsInfo.ctaAria">
                                         <img class="landing-button__icon-img" src="./assets/icons/arrow-white.svg" alt="" aria-hidden="true" />
                                     </a>
                                 </span>
@@ -982,73 +1095,48 @@
 
             <section class="team-members-panel" data-team-members-panel aria-labelledby="team-members-title">
                 <div class="team-members-panel__container">
-                    <div class="team-members-panel__left">
+                    <div class="team-members-panel__header">
                         <h2 class="team-members-panel__title" id="team-members-title" data-i18n="teamMembers.title">
-                            Meet<br>our team
+                            Meet the Arcadia Team
                         </h2>
+                    </div>
 
-                        <div class="team-members-panel__cta">
-                            <span class="magnetic-target" data-magnetic data-magnetic-strength="1" data-magnetic-max="16">
-                                <a class="landing-button landing-button--green liquid-glass liquid-glass--green" href="#contact" data-liquid-glass data-hover-sound data-wave-fill="#5A7A6A">
-                                    <span data-i18n="teamMembers.cta">
-                                        View more members
-                                    </span>
-                                </a>
-                            </span>
-
-                            <span class="magnetic-target" data-magnetic data-magnetic-strength="1" data-magnetic-max="16">
-                                <a class="landing-button landing-button--icon landing-button--green liquid-glass liquid-glass--green" href="#contact" data-liquid-glass data-hover-sound aria-label="View more members">
-                                    <img class="landing-button__icon-img" src="./assets/icons/arrow-white.svg" alt="" aria-hidden="true" />
-                                </a>
-                            </span>
+                    <div class="team-members-slider__viewport" data-team-slider-viewport>
+                        <div class="team-members-slider__track" data-team-slider-track>
                         </div>
                     </div>
 
-                    <div class="team-members-panel__center">
-                        <div class="team-members-panel__stack" data-team-members-stack>
-                            <!-- Cards injected by JS -->
-                        </div>
-
-                        <div class="team-members-panel__badge" data-team-members-badge>
-                            <img src="./assets/logos/arcadia-dark-green.png" alt="Team badge" data-team-members-badge-img />
+                    <div class="team-members-slider__progress-container">
+                        <div class="team-members-slider__progress-track">
+                            <div class="team-members-slider__progress-bar" data-team-slider-progress-bar></div>
                         </div>
                     </div>
 
-                    <div class="team-members-panel__right">
-                        <div class="team-members-panel__controls">
-                            <span class="magnetic-target" data-magnetic data-magnetic-strength="1" data-magnetic-max="25">
-                                <button class="team-members-panel__nav-btn liquid-glass liquid-glass--deep" type="button" data-team-members-prev data-liquid-glass data-hover-sound aria-label="Previous member">
-                                    <img class="team-members-panel__nav-icon team-members-panel__nav-icon--flip" src="./assets/icons/arrow-white.svg" alt="" aria-hidden="true" />
-                                </button>
-                            </span>
+                    <div class="about-presentation">
 
-                            <span class="magnetic-target" data-magnetic data-magnetic-strength="1" data-magnetic-max="25">
-                                <button class="team-members-panel__nav-btn liquid-glass liquid-glass--deep" type="button" data-team-members-next data-liquid-glass data-hover-sound aria-label="Next member">
-                                    <img class="team-members-panel__nav-icon" src="./assets/icons/arrow-white.svg" alt="" aria-hidden="true" />
-                                </button>
-                            </span>
+                        <div class="about-presentation__toggle liquid-glass liquid-glass--deep" data-presentation-toggle data-liquid-glass>
+                            <button class="about-presentation__toggle-btn about-presentation__toggle-btn--active" type="button" data-pres-switch="video" data-hover-sound data-i18n="teamMembers.toggleVideo">Video</button>
+                            <button class="about-presentation__toggle-btn" type="button" data-pres-switch="image" data-hover-sound data-i18n="teamMembers.toggleImage">Image</button>
+                            <div class="about-presentation__toggle-slider"></div>
                         </div>
 
-                        <div class="team-members-panel__cta-mobile">
-                            <span class="magnetic-target" data-magnetic data-magnetic-strength="1" data-magnetic-max="16">
-                                <a class="landing-button landing-button--green liquid-glass liquid-glass--green" href="#contact" data-liquid-glass data-hover-sound data-wave-fill="#5A7A6A">
-                                    <span data-i18n="teamMembers.cta">View more members</span>
-                                </a>
-                            </span>
-                        </div>
 
-                        <div class="team-members-panel__info">
-                            <div class="team-members-panel__name-wrapper">
-                                <h3 class="team-members-panel__member-name" data-team-members-name>
-                                    <span class="team-members-panel__first-name"></span>
-                                    <span class="team-members-panel__last-name"></span>
-                                </h3>
-                            </div>
+                        <div class="about-presentation__stage" data-presentation-stage>
 
-                            <div class="team-members-panel__role-wrapper">
-                                <p class="team-members-panel__member-role" data-team-members-role></p>
+                            <video class="about-presentation__video about-presentation__video--active" data-presentation-video autoplay loop muted playsinline>
+                                <source src="./assets/videos/about-placeholder.mp4" type="video/mp4" />
+                            </video>
+
+                            <div class="about-presentation__carousel" data-presentation-carousel>
+                                <div class="about-presentation__slide about-presentation__slide--active" style="background-image: url('./assets/images/about/carrusel/image_1.png');"></div>
+                                <div class="about-presentation__slide" style="background-image: url('./assets/images/about/carrusel/image_2.png');"></div>
+                                <div class="about-presentation__slide" style="background-image: url('./assets/images/about/carrusel/image_3.png');"></div>
                             </div>
                         </div>
+
+                        <p class="about-presentation__footer-text" data-scroll-text-reveal data-i18n="teamMembers.footerText">
+                            Our team understands both sides of the field. From agronomists and data engineers to product visionaries, everyone at Viora is united in bridging the gap between producers who grow and specialists who protect — turning shared knowledge into smarter, more productive harvests.
+                        </p>
                     </div>
                 </div>
             </section>
@@ -1073,7 +1161,7 @@
                     <div class="learning-from-best-panel__bubble" data-learning-bubble>
                         <div class="learning-from-best-panel__bubble-glow"></div>
                         <div class="learning-from-best-panel__bubble-content">
-                            <img src="./assets/images/inspo/elon.png" alt="" />
+                            <img src="./assets/images/inspo/angel.png" alt="" />
                         </div>
                     </div>
 
@@ -1122,48 +1210,45 @@
             </section>
         </section>
 
-        <section class="contact-section" id="contact" aria-labelledby="contact-title">
-            <div class="contact-section__container">
-                <div class="contact-section__row contact-section__row--header">
-                    <div class="contact-section__col contact-section__col--label">
-                        <span class="contact-section__bullet"></span>
-                        <span class="contact-section__label" data-i18n="contact.sectionLabel">Contact</span>
-                    </div>
-                    <div class="contact-section__col contact-section__col--title">
-                        <h2 class="contact-section__title" id="contact-title" data-i18n="contact.title">Talk to the team behind Viora</h2>
-                    </div>
-                    <div class="contact-section__col contact-section__col--logo">
-                        <img src="./assets/logos/viora-isologotipo-white.png" alt="Viora Logo" class="contact-section__logo" />
-                    </div>
-                </div>
+        <section class="segment-summary-section" data-segment-summary-section aria-labelledby="segment-summary-title">
+            <div class="segment-summary-section__header">
+                <h2 class="segment-summary-section__title" id="segment-summary-title" data-i18n="segmentSummary.title">
+                    Every orchard deserves the right tools.
+                </h2>
+            </div>
 
-                <div class="contact-section__row">
-                    <div class="contact-section__col contact-section__col--label">
-                        <span class="contact-section__bullet"></span>
-                        <span class="contact-section__label" data-i18n="contact.getInTouch.label">Get In Touch</span>
-                    </div>
-                    <div class="contact-section__col contact-section__col--info">
-                        <span class="contact-section__info-label" data-i18n="contact.getInTouch.talkToUs">Talk to us</span>
-                        <a href="tel:+51933855712" class="contact-section__link" data-i18n="contact.getInTouch.phone">+51 933 855 712</a>
-                    </div>
-                    <div class="contact-section__col contact-section__col--info">
-                        <span class="contact-section__info-label" data-i18n="contact.getInTouch.writeUs">Write us</span>
-                        <a href="mailto:daroncameloftdev@gmail.com" class="contact-section__link" data-i18n="contact.getInTouch.email">daroncameloftdev@gmail.com</a>
-                    </div>
-                </div>
+            <div class="segment-summary-section__viewport" data-segment-summary-viewport aria-label="Segment summary cards" data-i18n-aria-label="segmentSummary.aria">
+                <div class="segment-summary-section__track" data-segment-summary-track></div>
+            </div>
+        </section>
 
-                <div class="contact-section__row">
-                    <div class="contact-section__col contact-section__col--label">
-                        <span class="contact-section__bullet"></span>
-                        <span class="contact-section__label" data-i18n="contact.address.label">Address</span>
-                    </div>
-                    <div class="contact-section__col contact-section__col--info">
-                        <span class="contact-section__info-value" data-i18n="contact.address.location">Av Alameda San Marcos 11,<br />Chorrillos 15067</span>
-                        <a href="#" class="contact-section__link contact-section__link--map" data-i18n="contact.address.googleMaps">Google Maps</a>
-                    </div>
+        <section class="final-cta-section" data-final-cta-section aria-labelledby="final-cta-title">
+            <div class="final-cta-section__container">
+                <h2 class="final-cta-section__title" id="final-cta-title" data-final-cta-reveal="finalCta.title" data-i18n="finalCta.title">
+                    Smarter fields. Stronger harvests.<br />Built for those who grow.
+                </h2>
+
+                <p class="final-cta-section__subtitle" data-final-cta-reveal="finalCta.subtitle" data-i18n="finalCta.subtitle">
+                    The land has always had answers.<br />Viora helps you hear them.
+                </p>
+
+                <div class="final-cta-section__actions">
+                    <span class="magnetic-target" data-magnetic data-magnetic-strength="1" data-magnetic-max="16">
+                        <a class="landing-button landing-button--green liquid-glass liquid-glass--green" href="https://viora-webapp.web.app" data-liquid-glass data-hover-sound data-wave-fill="#5A7A6A">
+                            <span data-i18n="finalCta.button">Get Started</span>
+                        </a>
+                    </span>
+
+                    <span class="magnetic-target" data-magnetic data-magnetic-strength="1" data-magnetic-max="16">
+                        <a class="landing-button landing-button--icon landing-button--green liquid-glass liquid-glass--green" href="https://viora-webapp.web.app" data-liquid-glass data-hover-sound aria-label="Get started with Viora" data-i18n-aria-label="finalCta.buttonAria">
+                            <img class="landing-button__icon-img" src="./assets/icons/arrow-white.svg" alt="" aria-hidden="true" />
+                        </a>
+                    </span>
                 </div>
             </div>
         </section>
+
+
     </main>
 
     <footer class="footer-section" data-footer-section aria-labelledby="footer-title">
@@ -1178,7 +1263,7 @@
                     <a href="#pricing" data-hover-sound data-i18n="footer.bigLinks.pricing">PRICING</a>
                 </nav>
 
-                <a class="footer-section__credit" href="https://victor-paredes-portfolio.vercel.app/" target="_blank" rel="noopener noreferrer" data-hover-sound data-i18n="footer.credit">
+                <a class="footer-section__credit" href="#about" rel="noopener noreferrer" data-hover-sound data-i18n="footer.credit">
                     WEBSITE DESIGNED BY DARONCAMELOFT
                 </a>
             </div>
@@ -1187,22 +1272,32 @@
                 <nav class="footer-section__small-links" aria-label="Footer secondary navigation">
                     <a href="#home" data-hover-sound data-i18n="footer.links.home">Home</a>
                     <a href="#about" data-hover-sound data-i18n="footer.links.about">About Us</a>
-                    <a href="#contact" data-hover-sound data-i18n="footer.links.contact">Contact</a>
-                    <a href="#" data-hover-sound data-i18n="footer.links.terms">Terms of Service</a>
-                    <a href="#" data-hover-sound data-i18n="footer.links.privacy">Privacy Policy</a>
+
+                    <a href="#" data-legal-drawer-open="terms" data-hover-sound data-i18n="footer.links.terms">Terms of Service</a>
+                    <a href="#" data-legal-drawer-open="privacy" data-hover-sound data-i18n="footer.links.privacy">Privacy Policy</a>
                 </nav>
             </div>
 
             <div class="footer-section__right">
+                <div class="footer-section__characters" aria-hidden="true">
+                    <span class="footer-section__character footer-section__character--specialist">
+                        <img class="footer-section__character-img footer-section__character-img--default" src="./assets/images/footer/image1.png" alt="" />
+                        <img class="footer-section__character-img footer-section__character-img--hover" src="./assets/images/footer/hover_image1.png" alt="" />
+                    </span>
+                    <span class="footer-section__character footer-section__character--grower">
+                        <img class="footer-section__character-img footer-section__character-img--default" src="./assets/images/footer/image2.png" alt="" />
+                        <img class="footer-section__character-img footer-section__character-img--hover" src="./assets/images/footer/hover_image2.png" alt="" />
+                    </span>
+                </div>
+
                 <p class="footer-section__newsletter-text" data-i18n="footer.newsletterText">
-                    Get the latest updates on precision farming, new Viora features, and expert agronomist tips, straight to your inbox.
+                    Smarter harvests start here.
+                    Join the producers and specialists already growing with Viora.
                 </p>
 
-                <form class="footer-section__newsletter-form" data-footer-newsletter-form>
-                    <label class="sr-only" for="footer-email" data-i18n="footer.emailLabel">Email address</label>
-                    <input class="footer-section__email-input" id="footer-email" type="email" name="email" placeholder="Email address" data-i18n-placeholder="footer.emailPlaceholder" autocomplete="email" />
-                    <button class="footer-section__subscribe-button liquid-glass liquid-glass--green" type="submit" data-liquid-glass data-hover-sound data-i18n="footer.subscribe">subscribe</button>
-                </form>
+                <a class="footer-section__cta liquid-glass liquid-glass--green" href="https://viora-webapp.web.app" data-liquid-glass data-hover-sound>
+                    Try Viora now :D
+                </a>
 
                 <div class="footer-section__social">
                     <span data-i18n="footer.followUs">FOLLOW US:</span>
@@ -1213,6 +1308,102 @@
                     <a href="#" aria-label="LinkedIn" data-hover-sound><img src="./assets/icons/linkedin.svg" alt="" aria-hidden="true" /></a>
                 </div>
             </div>
+        </div>
+
+        <div class="legal-drawer" data-legal-drawer hidden>
+            <div class="legal-drawer__backdrop" data-legal-drawer-close></div>
+            <aside class="legal-drawer__panel" role="dialog" aria-modal="true" aria-labelledby="legal-drawer-title" tabindex="-1">
+                <button class="legal-drawer__close" type="button" aria-label="Close legal drawer" data-legal-drawer-close>
+                    &times;
+                </button>
+
+                <div class="legal-drawer__scroll">
+                    <article class="legal-drawer__content" data-legal-drawer-content="terms">
+                        <h2 id="legal-drawer-title">T&eacute;rminos de Servicio</h2>
+                        <p class="legal-drawer__updated">&Uacute;ltima actualizaci&oacute;n: mayo de 2026</p>
+
+                        <p>Bienvenido a Viora, una plataforma AgTech orientada a productores olivareros y especialistas fitosanitarios. Al acceder o utilizar nuestra Landing Page, aplicaci&oacute;n web o servicios relacionados, aceptas estos T&eacute;rminos de Servicio.</p>
+
+                        <h3>1. Uso de la plataforma</h3>
+                        <p>Viora permite a los usuarios acceder a herramientas digitales para el monitoreo de parcelas, an&aacute;lisis de datos clim&aacute;ticos y satelitales, alertas preventivas, recomendaciones agron&oacute;micas y conexi&oacute;n con especialistas agr&iacute;colas.</p>
+                        <p>El usuario se compromete a utilizar la plataforma de forma responsable, proporcionando informaci&oacute;n verdadera, actualizada y pertinente para el correcto funcionamiento de los servicios.</p>
+
+                        <h3>2. Registro y acceso</h3>
+                        <p>Para utilizar determinadas funcionalidades de Viora, el usuario puede necesitar crear una cuenta como Productor Olivarero o Especialista Fitosanitario. Cada perfil tendr&aacute; acceso a funcionalidades espec&iacute;ficas seg&uacute;n su rol dentro de la plataforma.</p>
+                        <p>El usuario es responsable de mantener la confidencialidad de sus credenciales de acceso y de toda actividad realizada desde su cuenta.</p>
+
+                        <h3>3. Informaci&oacute;n agron&oacute;mica y t&eacute;cnica</h3>
+                        <p>Los datos mostrados por Viora, incluyendo indicadores clim&aacute;ticos, NDVI, alertas de riesgo, proyecciones y recomendaciones, tienen fines informativos y de apoyo a la toma de decisiones.</p>
+                        <p>Viora no reemplaza la evaluaci&oacute;n profesional presencial ni garantiza resultados productivos espec&iacute;ficos. Las decisiones finales sobre manejo agr&iacute;cola, tratamientos o intervenciones t&eacute;cnicas son responsabilidad del usuario y/o del especialista contratado.</p>
+
+                        <h3>4. Conexi&oacute;n entre productores y especialistas</h3>
+                        <p>Viora puede facilitar la conexi&oacute;n entre productores olivareros y especialistas fitosanitarios mediante solicitudes, propuestas t&eacute;cnicas, cotizaciones o revelaci&oacute;n de datos de contacto.</p>
+                        <p>La relaci&oacute;n profesional, acuerdos econ&oacute;micos, ejecuci&oacute;n de servicios y resultados de la intervenci&oacute;n son responsabilidad de las partes involucradas.</p>
+
+                        <h3>5. Uso permitido</h3>
+                        <p>El usuario no debe utilizar Viora para publicar informaci&oacute;n falsa, manipular datos, realizar acciones fraudulentas, vulnerar cuentas de terceros, afectar el funcionamiento de la plataforma o usar la informaci&oacute;n con fines contrarios a la ley.</p>
+
+                        <h3>6. Disponibilidad del servicio</h3>
+                        <p>Viora busca mantener una experiencia estable y segura. Sin embargo, la plataforma puede presentar interrupciones temporales por mantenimiento, actualizaciones, fallas t&eacute;cnicas o indisponibilidad de servicios externos como APIs clim&aacute;ticas, satelitales, mapas o sistemas de pago.</p>
+
+                        <h3>7. Propiedad intelectual</h3>
+                        <p>El dise&ntilde;o, marca, contenidos, interfaces, textos, gr&aacute;ficos, componentes visuales y funcionalidades de Viora pertenecen a ArcadiaDevs o a sus respectivos titulares. No est&aacute; permitido copiar, modificar, distribuir o explotar estos elementos sin autorizaci&oacute;n previa.</p>
+
+                        <h3>8. Cambios en los t&eacute;rminos</h3>
+                        <p>Viora puede actualizar estos T&eacute;rminos de Servicio para reflejar mejoras del producto, cambios legales o ajustes operativos. La versi&oacute;n actualizada estar&aacute; disponible en la plataforma.</p>
+                    </article>
+
+                    <article class="legal-drawer__content" data-legal-drawer-content="privacy" hidden>
+                        <h2 id="legal-drawer-privacy-title">Pol&iacute;tica de Privacidad</h2>
+                        <p class="legal-drawer__updated">&Uacute;ltima actualizaci&oacute;n: mayo de 2026</p>
+                        <p>En Viora valoramos la privacidad y seguridad de la informaci&oacute;n de nuestros usuarios. Esta Pol&iacute;tica de Privacidad explica qu&eacute; datos podemos recopilar, c&oacute;mo los usamos y qu&eacute; medidas aplicamos para protegerlos.</p>
+
+                        <h3>1. Informaci&oacute;n que recopilamos</h3>
+                        <p>Viora puede recopilar informaci&oacute;n proporcionada por el usuario, como nombre, correo electr&oacute;nico, tel&eacute;fono, rol seleccionado, datos de perfil profesional, informaci&oacute;n de contacto y preferencias de uso.</p>
+                        <p>En el caso de productores, tambi&eacute;n podemos tratar informaci&oacute;n relacionada con parcelas agr&iacute;colas, ubicaci&oacute;n aproximada o georreferenciada, historial agron&oacute;mico, registros de manejo, alertas, reportes de s&iacute;ntomas y datos asociados al monitoreo del cultivo.</p>
+                        <p>En el caso de especialistas, podemos tratar informaci&oacute;n relacionada con experiencia profesional, servicios ofrecidos, zona de cobertura, disponibilidad, propuestas t&eacute;cnicas, cotizaciones y evaluaciones recibidas.</p>
+
+                        <h3>2. Informaci&oacute;n generada por la plataforma</h3>
+                        <p>La plataforma puede generar o procesar informaci&oacute;n derivada del uso del servicio, como indicadores clim&aacute;ticos, an&aacute;lisis satelitales, alertas preventivas, proyecciones de rendimiento, estados de riesgo, trazabilidad de intervenciones y actividad dentro del marketplace.</p>
+
+                        <h3>3. Uso de la informaci&oacute;n</h3>
+                        <p>Utilizamos la informaci&oacute;n para:</p>
+                        <ul class="legal-drawer__list">
+                            <li>Crear y gestionar cuentas de usuario.</li>
+                            <li>Personalizar la experiencia seg&uacute;n el rol del usuario.</li>
+                            <li>Habilitar el monitoreo de parcelas y el an&aacute;lisis agron&oacute;mico.</li>
+                            <li>Generar alertas, recomendaciones y reportes preventivos.</li>
+                            <li>Facilitar la conexi&oacute;n entre productores y especialistas.</li>
+                            <li>Mejorar la calidad, seguridad y funcionamiento de la plataforma.</li>
+                            <li>Realizar an&aacute;lisis internos para optimizar la experiencia del producto.</li>
+                        </ul>
+
+                        <h3>4. Servicios externos</h3>
+                        <p>Viora puede integrarse con servicios externos para obtener datos clim&aacute;ticos, satelitales, mapas, almacenamiento, autenticaci&oacute;n, pagos o comunicaciones. Estos servicios pueden procesar informaci&oacute;n necesaria para cumplir su funci&oacute;n dentro de la plataforma.</p>
+                        <p>Viora procura utilizar proveedores confiables y limitar el intercambio de datos a lo estrictamente necesario para la operaci&oacute;n del servicio.</p>
+
+                        <h3>5. Datos de ubicaci&oacute;n y parcelas</h3>
+                        <p>Los datos de ubicaci&oacute;n de parcelas se utilizan para habilitar funcionalidades como monitoreo clim&aacute;tico, an&aacute;lisis satelital, alertas territoriales y conexi&oacute;n con especialistas cercanos.</p>
+                        <p>Esta informaci&oacute;n no debe utilizarse para fines distintos a los relacionados con el funcionamiento de Viora y la prestaci&oacute;n de servicios agron&oacute;micos dentro de la plataforma.</p>
+
+                        <h3>6. Comunicaci&oacute;n entre usuarios</h3>
+                        <p>Cuando un productor acepta una propuesta o cotizaci&oacute;n de un especialista, Viora puede habilitar la visualizaci&oacute;n de datos de contacto necesarios para que ambas partes coordinen la intervenci&oacute;n fuera o dentro de los canales disponibles.</p>
+                        <p>El usuario debe utilizar esta informaci&oacute;n &uacute;nicamente para fines relacionados con el servicio solicitado.</p>
+
+                        <h3>7. Seguridad de la informaci&oacute;n</h3>
+                        <p>Aplicamos medidas t&eacute;cnicas y organizativas razonables para proteger los datos contra acceso no autorizado, p&eacute;rdida, alteraci&oacute;n o uso indebido. Sin embargo, ning&uacute;n sistema digital es completamente infalible, por lo que recomendamos a los usuarios proteger sus credenciales y mantener actualizada su informaci&oacute;n.</p>
+
+                        <h3>8. Conservaci&oacute;n de datos</h3>
+                        <p>La informaci&oacute;n se conservar&aacute; mientras sea necesaria para brindar el servicio, cumplir obligaciones operativas, resolver disputas, mantener trazabilidad o cumplir requerimientos legales aplicables.</p>
+
+                        <h3>9. Derechos del usuario</h3>
+                        <p>El usuario puede solicitar la actualizaci&oacute;n, correcci&oacute;n o eliminaci&oacute;n de sus datos personales, as&iacute; como realizar consultas sobre el tratamiento de su informaci&oacute;n mediante los canales oficiales de contacto de Viora.</p>
+
+                        <h3>10. Cambios en esta pol&iacute;tica</h3>
+                        <p>Viora puede actualizar esta Pol&iacute;tica de Privacidad debido a cambios en la plataforma, nuevos servicios, mejoras de seguridad o requisitos legales. La versi&oacute;n vigente estar&aacute; disponible en la Landing Page o en la aplicaci&oacute;n web.</p>
+                    </article>
+                </div>
+            </aside>
         </div>
     </footer>
 
