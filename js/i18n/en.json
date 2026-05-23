@@ -6,25 +6,20 @@
     "specialists": "Specialists",
     "pricing": "Pricing",
     "aboutUs": "About Us",
-    "contact": "Contact",
     "getStarted": "Get Started"
   },
   "hero": {
     "title": "Maximum Yield\nfor Growers, Total Precision\nfor Specialists.",
     "subtitle": "Providing growers with absolute harvest control and phytosanitary experts with advanced diagnostic tools. An all-in-one solution that transforms satellite and climate data into critical decisions.",
     "cta": "Get Started Now!",
-    "seePlans": "See Plans",
     "siteCredit": "SITE BY @ARCADIADEVS",
-    "language": "EN | ES",
     "sound": "SOUND"
   },
   "aria": {
     "mainNavigation": "Main navigation",
     "landingSections": "Landing page sections",
     "goHome": "Go to Viora home",
-    "getStarted": "Get started with Viora",
     "heroActions": "Hero actions",
-    "languageToggle": "Change language",
     "soundToggle": "Toggle sound"
   },
   "aboutIntro": {
@@ -124,8 +119,7 @@
       "eyebrow": "A Viora's Recommendation",
       "title": "NEVER FACE A PEST OUTBREAK ALONE",
       "description": "When risk rises, Viora connects you with nearby specialists who can review your field data, assess the situation, and help you respond faster with targeted technical action.",
-      "cta": "Explore the Marketplace",
-      "ctaAria": "Explore the marketplace"
+      "cta": "Explore the Marketplace"
     }
   },
   "roleBenefits": {
@@ -228,59 +222,6 @@
           }
         ]
       }
-    },
-    "visuals": {
-      "plot": { "title": "Plot boundaries", "note": "Georeferenced field setup with agronomic history.", "metric": "3.8 ha mapped" },
-      "dashboard": { "title": "Decision dashboard", "note": "Climate, NDVI, chill portions, and yield signals.", "metric": "NDVI +12%" },
-      "alerts": { "title": "Preventive alerts", "note": "Stress signals become prioritized field actions.", "metric": "Risk detected" },
-      "support": { "title": "Expert support", "note": "Traceable requests from alert to resolution.", "metric": "Proposal ready" },
-      "profile": { "title": "Specialist profile", "note": "Credentials, coverage, and availability in one place.", "metric": "Verified" },
-      "opportunities": { "title": "Risk opportunities", "note": "Prioritized producer cases by severity and location.", "metric": "4 active cases" },
-      "case": { "title": "Case context", "note": "Plot history, NDVI, weather, and reported symptoms.", "metric": "Full context" },
-      "prescription": { "title": "Field prescription", "note": "Technical recommendations with service traceability.", "metric": "Trust +" }
-    },
-    "producer": {
-      "tab": "Olive Producers",
-      "title": "For Olive Producers",
-      "pill1": "Satellite, climate, and chill portion monitoring.",
-      "pill2": "Automated epidemiological pest alerts.",
-      "pill3": "Alternate bearing prediction and dynamic nutrition support.",
-      "cta": "View Pricing Plans",
-      "note": "Climate volatility and sudden pest outbreaks make olive production harder to predict. Viora turns field data into actionable insights, helping you detect risk earlier, protect yield, and respond faster with the right specialist when needed."
-    },
-    "specialist": {
-      "tab": "Phytosanitary specialists",
-      "title": "Phytosanitary specialists",
-      "pill1": "Access new service opportunities through the specialist marketplace.",
-      "pill2": "Review plot context, NDVI patterns, and reported field risk signals.",
-      "pill3": "Digital prescriptions and field assessment tools.",
-      "cta": "Join the Marketplace",
-      "note": "Finding new clients and responding early to field risk is difficult without the right signals. Viora helps you discover service opportunities, review field context with satellite-based indicators, and deliver faster, more structured technical guidance."
-    }
-  },
-  "imageCta": {
-    "tabsAria": "Viora platform capabilities",
-    "items": {
-      "producer": {
-        "name": "PRODUCER",
-        "title": "Your orchard speaks.\nAre you listening?",
-        "subtitle": "Monitor soil health, water levels, and crop conditions in real time — all from one platform."
-      },
-      "harvest": {
-        "name": "HARVEST",
-        "title": "Plan your harvest.\nMaximize every yield.",
-        "subtitle": "Get data-driven recommendations on the optimal time to harvest and reduce losses before they happen."
-      },
-      "specialist": {
-        "name": "SPECIALIST",
-        "title": "Detect threats before\nthey spread.",
-        "subtitle": "Receive epidemiological pest alerts and collaborate directly with producers to act fast and protect the field."
-      },
-      "insights": {
-        "name": "INSIGHTS",
-        "title": "Your expertise,\namplified by data.",
-        "subtitle": "Access historical field reports, track interventions, and deliver precise recommendations backed by real evidence."
-      }
     }
   },
   "pricingIntro": {
@@ -349,13 +290,10 @@
     "builtBy": "Built by ArcadiaDevs",
     "focusedOn": "Focused on Olive Production",
     "statement": "Helping olive growers and crop protection specialists make earlier, smarter decisions.",
-    "description": "We are ArcadiaDevs, a software and design team building Viora: a SaaS platform focused on the intelligent management of olive production. We combine environmental data, early phytosanitary alerts, and specialist connection to help the olive sector respond with greater clarity and confidence.",
-    "cta": "Contact Us",
-    "ctaAria": "Contact us"
+    "description": "We are ArcadiaDevs, a software and design team building Viora: a SaaS platform focused on the intelligent management of olive production. We combine environmental data, early phytosanitary alerts, and specialist connection to help the olive sector respond with greater clarity and confidence."
   },
   "teamMembers": {
     "title": "Meet the Arcadia Team",
-    "cta": "View more members",
     "role": "Group ArcadiaDevs",
     "toggleVideo": "Video",
     "toggleImage": "Image",
@@ -461,22 +399,6 @@
       }
     ]
   },
-  "contact": {
-    "sectionLabel": "Contact",
-    "title": "Talk to the team behind Viora",
-    "getInTouch": {
-      "label": "Get In Touch",
-      "talkToUs": "Talk to us",
-      "writeUs": "Write us"
-    },
-    "address": {
-      "label": "Address",
-      "location": "Av Alameda San Marcos 11,<br />Chorrillos 15067",
-      "googleMaps": "Google Maps",
-      "openForm": "Open form",
-      "sendMessage": "Send a message"
-    }
-  },
   "footer": {
     "bigLinks": {
       "features": "FEATURES",
@@ -488,14 +410,10 @@
     "links": {
       "home": "Home",
       "about": "About Us",
-      "contact": "Contact",
       "terms": "Terms of Service",
       "privacy": "Privacy Policy"
     },
     "newsletterText": "Smarter harvests start here. Join the producers and specialists already growing with Viora.",
-    "emailLabel": "Email address",
-    "emailPlaceholder": "Email address",
-    "subscribe": "subscribe",
     "followUs": "FOLLOW US:"
   }
 }
