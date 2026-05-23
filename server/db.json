@@ -139,7 +139,7 @@
       "currentTemp": 22,
       "condition": "Partly cloudy",
       "lastUpdate": "2026-05-11T19:34:00Z",
-      "icon": "/assets/images/weather/party_cloudy.png",
+      "icon": "./public/assets/images/weather/party_cloudy.png",
       "backgroundImage": "/assets/images/weather/party_cloudy_background.png",
       "forecast3Days": [
         {
@@ -163,6 +163,52 @@
       ],
       "temperatureAnomaly": 1.5,
       "climateRisk": "Medium"
+    }
+  ],
+  "iot-device-summaries": [
+    {
+      "id": 1,
+      "totalOnlineDevices": 3,
+      "plotsWithIot": 2,
+      "lastSync": "2026-05-09T13:20:00Z",
+      "sensorCards": [
+        {
+          "id": 1,
+          "plotId": 1,
+          "title": "Water Stress",
+          "sourceLabel": "IoT",
+          "metricLabel": "Soil moisture",
+          "metricValue": 28,
+          "metricUnit": "%",
+          "trend": "up",
+          "riskLevel": "Medium",
+          "recommendation": "Preventive irrigation suggested"
+        },
+        {
+          "id": 2,
+          "plotId": 1,
+          "title": "Water Stress",
+          "sourceLabel": "IoT",
+          "metricLabel": "Soil temperature",
+          "metricValue": 24,
+          "metricUnit": "°",
+          "trend": "up",
+          "riskLevel": "Medium",
+          "recommendation": "Preventive irrigation suggested"
+        },
+        {
+          "id": 3,
+          "plotId": 2,
+          "title": "Water Stress",
+          "sourceLabel": "IoT",
+          "metricLabel": "Soil moisture",
+          "metricValue": 31,
+          "metricUnit": "%",
+          "trend": "stable",
+          "riskLevel": "Low",
+          "recommendation": "Maintain regular monitoring"
+        }
+      ]
     }
   ],
   "yield-forecasts": [
