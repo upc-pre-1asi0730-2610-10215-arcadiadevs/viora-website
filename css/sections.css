@@ -4022,11 +4022,12 @@ body.drawer-open {
 }
 
 .expected-outcomes-panel__video {
+    display: block;
     width: 100%;
-    height: 125%;
+    height: 155%;
     object-fit: cover;
     will-change: transform;
-    transform: translate3d(0, calc(-10% + var(--outcomes-parallax-y, 0vh)), 0);
+    transform: translate3d(0, calc(-17.75% + var(--outcomes-parallax-y, 0px)), 0);
 }
 
 .expected-outcomes-panel__content {
@@ -4038,9 +4039,6 @@ body.drawer-open {
 
     padding: clamp(3rem, 6vw, 5rem) clamp(2rem, 6vw, 4.5rem);
     text-align: center;
-
-    will-change: transform;
-    transform: translate3d(0, var(--outcomes-parallax-y, 0px), 0);
 }
 
 .expected-outcomes-panel__content--metrics {
