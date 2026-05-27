@@ -4,7 +4,7 @@ import { initializeMagneticEffect } from '../effects/magnetic.effect.js';
 import { initializeHoverSoundEffect } from '../effects/hover-sound.effect.js';
 import { isSoundGlobalOn } from '../sound.js';
 
-const APP_URL = 'https://viora-webapp.web.app';
+const APP_URL = 'https://viora-release-001.web.app/dashboard';
 const DRAG_SOUND_PATH = './assets/audio/drag-cards.mp3';
 const DRAG_SOUND_VOLUME = 0.28;
 const DRAG_DISTANCE = 260;
