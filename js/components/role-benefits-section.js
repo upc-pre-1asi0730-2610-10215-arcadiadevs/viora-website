@@ -144,7 +144,7 @@ function createMobileCard(storyKey, index) {
                 <p>${text.description}</p>
                 <ul>${bullets}</ul>
                 <span class="magnetic-target" data-magnetic data-magnetic-strength="1" data-magnetic-max="12">
-                    <a class="segment-story__mobile-button landing-button landing-button--${buttonVariant} liquid-glass liquid-glass--${buttonVariant}" href="https://viora-webapp.web.app" data-liquid-glass data-hover-sound>${text.cta}</a>
+                    <a class="segment-story__mobile-button landing-button landing-button--${buttonVariant} liquid-glass liquid-glass--${buttonVariant}" href="https://viora-release-001.web.app/dashboard" data-liquid-glass data-hover-sound>${text.cta}</a>
                 </span>
             </div>
         </article>
