@@ -6,20 +6,25 @@
     "specialists": "Especialistas",
     "pricing": "Planes",
     "aboutUs": "Nosotros",
+    "contact": "Contacto",
     "getStarted": "Comenzar"
   },
   "hero": {
     "title": "Máxima Rentabilidad\npara el Olivar, Precisión Total\npara el Especialista.",
     "subtitle": "Brindamos a los agricultores el control absoluto de su cosecha y a los expertos fitosanitarios herramientas de diagnóstico avanzadas. Una solución integral que transforma datos satelitales y climáticos en decisiones críticas.",
     "cta": "¡Comienza hoy mismo!",
+    "seePlans": "Ver Planes",
     "siteCredit": "SITIO POR @ARCADIADEVS",
+    "language": "EN | ES",
     "sound": "SONIDO"
   },
   "aria": {
     "mainNavigation": "Navegación principal",
     "landingSections": "Secciones de la landing page",
     "goHome": "Ir al inicio de Viora",
+    "getStarted": "Comenzar con Viora",
     "heroActions": "Acciones principales del Hero",
+    "languageToggle": "Cambiar idioma",
     "soundToggle": "Activar o desactivar sonido"
   },
   "aboutIntro": {
@@ -119,8 +124,19 @@
       "eyebrow": "Una Recomendación de Viora",
       "title": "NUNCA ENFRENTES UN BROTE DE PLAGAS SOLO",
       "description": "Cuando el riesgo aumenta, Viora te conecta con especialistas cercanos que pueden revisar los datos de tu campo, evaluar la situación y ayudarte a responder más rápido con acciones técnicas focalizadas.",
-      "cta": "Explorar el Marketplace"
+      "cta": "Explorar el Marketplace",
+      "ctaAria": "Explorar el marketplace"
     }
+  },
+  "featureProduct": {
+    "brand": "Viora",
+    "tagline": "Tierra que habla.\nProducci\u00f3n que crece.",
+    "eyebrow": "Monitoreo inteligente",
+    "title": "Tu campo habla.\n\u00bfEst\u00e1s escuchando?",
+    "playAria": "Reproducir video del producto",
+    "moreAria": "Mostrar contenido adicional del producto",
+    "cta": "Prueba Viora gratis",
+    "moreText": "Accede a datos de tu campo en tiempo real con monitoreo IoT a fondo. Gestiona tus cosechas con las herramientas de Viora Harvest. Mantente un paso adelante con alertas epidemiol\u00f3gicas localizadas y precisas para tu olivar. Y conecta con los mejores especialistas agr\u00f3nomos cuando tu campo m\u00e1s lo necesite."
   },
   "roleBenefits": {
     "sectionLabel": "Segmentos",
@@ -222,6 +238,16 @@
           }
         ]
       }
+    },
+    "visuals": {
+      "plot": { "title": "Límites de parcela", "note": "Configuración georreferenciada con historial agronómico.", "metric": "3.8 ha mapeadas" },
+      "dashboard": { "title": "Panel de decisión", "note": "Clima, NDVI, porciones de frío y señales de rendimiento.", "metric": "NDVI +12%" },
+      "alerts": { "title": "Alertas preventivas", "note": "Las señales de estrés se convierten en acciones priorizadas.", "metric": "Riesgo detectado" },
+      "support": { "title": "Soporte experto", "note": "Solicitudes trazables desde la alerta hasta la resolución.", "metric": "Propuesta lista" },
+      "profile": { "title": "Perfil especialista", "note": "Credenciales, cobertura y disponibilidad en un solo lugar.", "metric": "Verificado" },
+      "opportunities": { "title": "Oportunidades por riesgo", "note": "Casos priorizados por severidad y ubicación.", "metric": "4 casos activos" },
+      "case": { "title": "Contexto del caso", "note": "Historial, NDVI, clima y síntomas reportados.", "metric": "Contexto completo" },
+      "prescription": { "title": "Prescripción de campo", "note": "Recomendaciones técnicas con trazabilidad del servicio.", "metric": "Confianza +" }
     }
   },
   "pricingIntro": {
@@ -290,10 +316,13 @@
     "builtBy": "Construido por ArcadiaDevs",
     "focusedOn": "Enfocados en la Producción de Olivos",
     "statement": "Ayudamos a los productores olivareros y especialistas en protección de cultivos a tomar decisiones más tempranas e inteligentes.",
-    "description": "Somos ArcadiaDevs, un equipo de software y diseño que construye Viora: una plataforma SaaS enfocada en la gestión inteligente de la producción olivarera. Combinamos datos ambientales, alertas fitosanitarias tempranas y conexión con especialistas para ayudar al sector olivarero a responder con mayor claridad y confianza."
+    "description": "Somos ArcadiaDevs, un equipo de software y diseño que construye Viora: una plataforma SaaS enfocada en la gestión inteligente de la producción olivarera. Combinamos datos ambientales, alertas fitosanitarias tempranas y conexión con especialistas para ayudar al sector olivarero a responder con mayor claridad y confianza.",
+    "cta": "Contáctanos",
+    "ctaAria": "Contáctanos"
   },
   "teamMembers": {
     "title": "Conoce al equipo Arcadia",
+    "cta": "Ver más miembros",
     "role": "Grupo ArcadiaDevs",
     "toggleVideo": "Video",
     "toggleImage": "Imagen",
@@ -399,6 +428,22 @@
       }
     ]
   },
+  "contact": {
+    "sectionLabel": "Contacto",
+    "title": "Habla con el equipo detrás de Viora",
+    "getInTouch": {
+      "label": "Ponte en contacto",
+      "talkToUs": "Habla con nosotros",
+      "writeUs": "Escríbenos"
+    },
+    "address": {
+      "label": "Dirección",
+      "location": "Av Alameda San Marcos 11,<br />Chorrillos 15067",
+      "googleMaps": "Google Maps",
+      "openForm": "Abrir formulario",
+      "sendMessage": "Enviar un mensaje"
+    }
+  },
   "footer": {
     "bigLinks": {
       "features": "FUNCIONES",
@@ -410,10 +455,14 @@
     "links": {
       "home": "Inicio",
       "about": "Nosotros",
+      "contact": "Contacto",
       "terms": "Términos de Servicio",
       "privacy": "Política de Privacidad"
     },
     "newsletterText": "Cosechas más inteligentes comienzan aquí. Únete a los productores y especialistas que ya están creciendo con Viora.",
+    "emailLabel": "Correo electrónico",
+    "emailPlaceholder": "Correo electrónico",
+    "subscribe": "suscribirse",
     "followUs": "SÍGUENOS:"
   }
 }
