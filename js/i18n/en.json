@@ -6,20 +6,25 @@
     "specialists": "Specialists",
     "pricing": "Pricing",
     "aboutUs": "About Us",
+    "contact": "Contact",
     "getStarted": "Get Started"
   },
   "hero": {
     "title": "Maximum Yield\nfor Growers, Total Precision\nfor Specialists.",
     "subtitle": "Providing growers with absolute harvest control and phytosanitary experts with advanced diagnostic tools. An all-in-one solution that transforms satellite and climate data into critical decisions.",
     "cta": "Get Started Now!",
+    "seePlans": "See Plans",
     "siteCredit": "SITE BY @ARCADIADEVS",
+    "language": "EN | ES",
     "sound": "SOUND"
   },
   "aria": {
     "mainNavigation": "Main navigation",
     "landingSections": "Landing page sections",
     "goHome": "Go to Viora home",
+    "getStarted": "Get started with Viora",
     "heroActions": "Hero actions",
+    "languageToggle": "Change language",
     "soundToggle": "Toggle sound"
   },
   "aboutIntro": {
@@ -119,8 +124,19 @@
       "eyebrow": "A Viora's Recommendation",
       "title": "NEVER FACE A PEST OUTBREAK ALONE",
       "description": "When risk rises, Viora connects you with nearby specialists who can review your field data, assess the situation, and help you respond faster with targeted technical action.",
-      "cta": "Explore the Marketplace"
+      "cta": "Explore the Marketplace",
+      "ctaAria": "Explore the marketplace"
     }
+  },
+  "featureProduct": {
+    "brand": "Viora",
+    "tagline": "Land that speaks.\nProduction that grows.",
+    "eyebrow": "Intelligent monitoring",
+    "title": "Your field speaks.\nAre you listening?",
+    "playAria": "Play product video",
+    "moreAria": "Show additional product content",
+    "cta": "Prueba Viora gratis",
+    "moreText": "Access real-time field data with deep IoT monitoring. Manage your harvests with Viora Harvest tools. Stay one step ahead with localized, precise epidemiological alerts for your olive grove. And connect with the best agronomic specialists when your field needs them most."
   },
   "roleBenefits": {
     "sectionLabel": "Segments",
@@ -222,6 +238,16 @@
           }
         ]
       }
+    },
+    "visuals": {
+      "plot": { "title": "Plot boundaries", "note": "Georeferenced field setup with agronomic history.", "metric": "3.8 ha mapped" },
+      "dashboard": { "title": "Decision dashboard", "note": "Climate, NDVI, chill portions, and yield signals.", "metric": "NDVI +12%" },
+      "alerts": { "title": "Preventive alerts", "note": "Stress signals become prioritized field actions.", "metric": "Risk detected" },
+      "support": { "title": "Expert support", "note": "Traceable requests from alert to resolution.", "metric": "Proposal ready" },
+      "profile": { "title": "Specialist profile", "note": "Credentials, coverage, and availability in one place.", "metric": "Verified" },
+      "opportunities": { "title": "Risk opportunities", "note": "Prioritized producer cases by severity and location.", "metric": "4 active cases" },
+      "case": { "title": "Case context", "note": "Plot history, NDVI, weather, and reported symptoms.", "metric": "Full context" },
+      "prescription": { "title": "Field prescription", "note": "Technical recommendations with service traceability.", "metric": "Trust +" }
     }
   },
   "pricingIntro": {
@@ -290,10 +316,13 @@
     "builtBy": "Built by ArcadiaDevs",
     "focusedOn": "Focused on Olive Production",
     "statement": "Helping olive growers and crop protection specialists make earlier, smarter decisions.",
-    "description": "We are ArcadiaDevs, a software and design team building Viora: a SaaS platform focused on the intelligent management of olive production. We combine environmental data, early phytosanitary alerts, and specialist connection to help the olive sector respond with greater clarity and confidence."
+    "description": "We are ArcadiaDevs, a software and design team building Viora: a SaaS platform focused on the intelligent management of olive production. We combine environmental data, early phytosanitary alerts, and specialist connection to help the olive sector respond with greater clarity and confidence.",
+    "cta": "Contact Us",
+    "ctaAria": "Contact us"
   },
   "teamMembers": {
     "title": "Meet the Arcadia Team",
+    "cta": "View more members",
     "role": "Group ArcadiaDevs",
     "toggleVideo": "Video",
     "toggleImage": "Image",
@@ -399,6 +428,22 @@
       }
     ]
   },
+  "contact": {
+    "sectionLabel": "Contact",
+    "title": "Talk to the team behind Viora",
+    "getInTouch": {
+      "label": "Get In Touch",
+      "talkToUs": "Talk to us",
+      "writeUs": "Write us"
+    },
+    "address": {
+      "label": "Address",
+      "location": "Av Alameda San Marcos 11,<br />Chorrillos 15067",
+      "googleMaps": "Google Maps",
+      "openForm": "Open form",
+      "sendMessage": "Send a message"
+    }
+  },
   "footer": {
     "bigLinks": {
       "features": "FEATURES",
@@ -410,10 +455,14 @@
     "links": {
       "home": "Home",
       "about": "About Us",
+      "contact": "Contact",
       "terms": "Terms of Service",
       "privacy": "Privacy Policy"
     },
     "newsletterText": "Smarter harvests start here. Join the producers and specialists already growing with Viora.",
+    "emailLabel": "Email address",
+    "emailPlaceholder": "Email address",
+    "subscribe": "subscribe",
     "followUs": "FOLLOW US:"
   }
 }
