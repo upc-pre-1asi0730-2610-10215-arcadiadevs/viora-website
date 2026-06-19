@@ -149,6 +149,17 @@
       "ctaAria": "Explorar el marketplace"
     }
   },
+  "featureProduct": {
+    "brand": "Viora",
+    "tagline": "Tierra que habla.\nProducción que crece.",
+    "eyebrow": "Monitoreo inteligente",
+    "title": "Tu campo habla.\n¿Estás escuchando?",
+    "playAria": "Reproducir video del producto",
+    "moreAria": "Mostrar contenido adicional del producto",
+    "youtubeAria": "Ver en YouTube",
+    "cta": "Prueba Viora gratis",
+    "moreText": "Accede a datos de tu campo en tiempo real con monitoreo IoT a fondo. Gestiona tus cosechas con las herramientas de Viora Harvest. Mantente un paso adelante con alertas epidemiológicas localizadas y precisas para tu olivar. Y conecta con los mejores especialistas agrónomos cuando tu campo más lo necesite."
+  },
   "roleBenefits": {
     "sectionLabel": "Segmentos",
     "growersTitle": "Productores",
@@ -341,6 +352,9 @@
     "role": "Grupo ArcadiaDevs",
     "toggleVideo": "Video",
     "toggleImage": "Imagen",
+    "videoPlayAria": "Reproducir video del equipo",
+    "videoCloseAria": "Salir de la reproducción",
+    "videoYoutubeAria": "Ver en YouTube",
     "footerText": "Nuestro equipo entiende ambos lados del campo. Desde agrónomos e ingenieros de datos hasta visionarios de producto, todos en Viora estamos unidos para cerrar la brecha entre los productores que cultivan y los especialistas que protegen — convirtiendo el conocimiento compartido en cosechas más inteligentes y productivas."
   },
   "finalCta": {
